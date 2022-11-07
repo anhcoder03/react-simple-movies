@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 font-body px-5 text-white;
+  }
+}
+@layer components {
+  .page-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .movies-list .swiper-slide {
+    width: 300px;
+    height: auto;
+  }
+  .banner .swiper {
+    height: 100%;
+  }
+  .demo {
+    font-size: 18px;
+    .selected {
+      padding: 4px 14px;
+      background-color: white;
+      color: #f62682;
+      font-weight: 700;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .previous {
+      font-size: 30px;
+    }
+    .next {
+      font-size: 30px;
+    }
+  }
+}
