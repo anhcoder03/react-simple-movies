@@ -10,7 +10,7 @@ const Banner = () => {
   );
   const movies = data?.results || [];
   return (
-    <section className="banner h-[600px] page-container mb-20 overflow-hidden">
+    <section className="mt-[130px] banner h-[600px] page-container mb-20 overflow-hidden">
       <Swiper grabCursor={"true"} slidesPerView={"auto"}>
         {movies.length > 0 &&
           movies.map((item) => (

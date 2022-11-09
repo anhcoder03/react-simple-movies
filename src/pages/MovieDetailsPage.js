@@ -14,7 +14,7 @@ const MovieDetailsPage = () => {
   if (!data) return null;
   const { title, backdrop_path, poster_path, genres, overview } = data;
   return (
-    <div className="py-10 page-container">
+    <div className="mt-[120px] py-10 page-container">
       <div className="relative w-full h-[600px] bg-cover bg-no-repeat">
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         <div

@@ -44,10 +44,10 @@ const MoviePage = () => {
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % data.total_results;
     setItemOffset(newOffset);
-    setNextPage(event.selected + 1)
+    setNextPage(event.selected + 1);
   };
   return (
-    <div className="py-10 page-container">
+    <div className="py-10 page-container mt-20">
       <div className="flex mb-20 w-full max-w-[600px] mx-auto">
         <div className="flex-1">
           <input
@@ -75,7 +75,7 @@ const MoviePage = () => {
         </button>
       </div>
       {loading && (
-        <div className="w-10 h-10 rounded-full border-4 border-primary border-t-4 border-t-transparent mx-auto animate-spin mb-10"  ></div>
+        <div className="w-10 h-10 rounded-full border-4 border-primary border-t-4 border-t-transparent mx-auto animate-spin mb-10"></div>
       )}
       <div className="grid grid-cols-4 gap-10">
         {!loading &&
@@ -86,17 +86,17 @@ const MoviePage = () => {
       </div>
       {!loading && (
         <div className="mt-10">
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel=">"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-          previousLabel="<"
-          renderOnZeroPageCount={null}
-          className="demo w-full max-w-[600px] mx-auto flex justify-center items-center gap-x-5"
-        />
-      </div>
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel=">"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+            previousLabel="<"
+            renderOnZeroPageCount={null}
+            className="demo w-full max-w-[600px] mx-auto flex justify-center items-center gap-x-5"
+          />
+        </div>
       )}
     </div>
   );
